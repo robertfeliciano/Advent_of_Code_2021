@@ -77,18 +77,17 @@ int part_2(std::string filename){
             direction = line.substr(0, index);
 
             if (direction.compare("forward") == 0){
-                //if forward, we increase our horizontal position
                 directions[0] += move;
                 if (aim != 0){
                     directions[1] += aim*move;
                 }
             }
             else if (direction.compare("up") == 0){
-                //if up, we decrease our depth 
+                //if up, we decrease our aim 
                 aim -= move;
             }
             else{
-                //otherwise the word must be down, so we increase our depth
+                //otherwise the word must be down, so we increase our aim
                 aim += move;
             }
         }
